@@ -13,14 +13,14 @@ class Item(BaseModel):
 
 @app.post("/clustering/")
 async def process(item: Item):
-    centers = "teste"
-    error = 'testado'
+    #centers = "teste"
+    #error = 'testado'
     # print(type(item.data))
     colors = Pallet()
-    # file64 = item.data.split(',')[1].encode()
-    # b64_string = file64.decode()
-    # centers,error = colors.process(b64_string)
-    # error = []
+    file64 = item.data.split(',')[1].encode()
+    b64_string = file64.decode()
+    centers,error = colors.process(b64_string)
+    error = []
     return {"message":centers, "errors":error}
 
 @app.get("/")
