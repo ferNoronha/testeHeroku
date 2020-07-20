@@ -1,18 +1,18 @@
 from fastapi import FastAPI, File, Body
 #from pallet import Pallet
-#import base64
-#from pydantic import BaseModel
+import base64
+from pydantic import BaseModel
 
 
 app = FastAPI()
 
-#class Item(BaseModel):
-#    data: str
+class Item(BaseModel):
+    data: str
 
 #data: str = Body(...)
-#item: Item
+
 @app.post("/clustering/")
-async def process():
+async def process(item: Item):
     centers = "teste"
     error = 'testado'
     # print(type(item.data))
