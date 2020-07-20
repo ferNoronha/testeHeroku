@@ -8,7 +8,8 @@ import base64
 class Pallet:
     def __init__(self):
         #self.criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 10, 1.0)
-        #self.K = 5
+        self.K = 5
+        
     
     def process(self,encode):
         # error = []
@@ -39,7 +40,7 @@ class Pallet:
         # for key,value in sorted(union.items(), key= lambda x : x[1]):
         #     centers.append(center[key].tolist())
         
-         cent = []
+        cent = []
         # for i in centers:
         #     obj = {
         #         'R':i[2],
