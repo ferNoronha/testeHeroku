@@ -1,5 +1,5 @@
 from fastapi import FastAPI, File, Body
-from pallet import Pallet
+from .pallet import Pallet
 import base64
 from pydantic import BaseModel
 
